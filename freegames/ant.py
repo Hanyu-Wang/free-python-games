@@ -9,10 +9,10 @@ Exercises
 
 """
 
-from random import *
-from turtle import *
+from random import random
+import turtle
 
-from freegames import vector
+from freegames.utils import vector
 
 ant = vector(0, 0)
 aim = vector(2, 0)
@@ -32,16 +32,16 @@ def draw():
     aim.move(random() - 0.5)
     aim.rotate(random() * 10 - 5)
 
-    clear()
-    goto(ant.x, ant.y)
-    dot(4)
+    turtle.clear()
+    turtle.goto(ant.x, ant.y)
+    turtle.dot(4)
 
-    ontimer(draw, 100)
+    turtle.ontimer(draw, 100)
 
 
-setup(420, 420, 370, 0)
-hideturtle()
-tracer(False)
-up()
+turtle.setup(420, 420, 370, 0)
+turtle.hideturtle()
+turtle.tracer(False)
+turtle.up()
 draw()
-done()
+turtle.done()
