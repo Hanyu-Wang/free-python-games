@@ -44,4 +44,5 @@ turtle.hideturtle()
 turtle.tracer(False)
 turtle.up()
 draw()
+# 关闭小乌龟
 turtle.done()
